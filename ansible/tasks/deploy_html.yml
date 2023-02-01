@@ -1,0 +1,11 @@
+  - name: set apache2 to display server ip on server 1
+    shell: "echo \"<h3 style='text-align: center;'>I am server-1 with ip: $(hostname -f)</h3>\" > /var/www/html/index.html"
+    when: inventory_hostname in groups['server_1']
+
+  - name: set apache2 to display server ip on server 2
+    shell: "echo \"<h3 style='text-align: center;'>I am server-2 with ip: $(hostname -f)</h3>\" > /var/www/html/index.html"
+    when: inventory_hostname in groups['server_2']
+
+  - name: set apache2 to display server ip on server 3
+    shell: "echo \"<h3 style='text-align: center;'>I am server-3 with ip: $(hostname -f)</h3>\" > /var/www/html/index.html"
+    when: inventory_hostname in groups['server_3']
