@@ -83,7 +83,7 @@ run 'terraform fmt' to format configuration files.
 run 'terraform validate' to confirm configuration is valid.
 run 'terraform plan' to see changes to be made to infrastructure.
 ```
-## Deploy
+### Deploy
 ```
 run 'terraform apply -auto-approve' to apply configurations.
 ```
