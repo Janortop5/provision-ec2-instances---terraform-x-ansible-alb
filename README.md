@@ -42,7 +42,7 @@ Using Terraform to setup 3 EC2 instances put behind a load balancer, and integra
 ### /roles/apache2/tasks/main.yml
 - Contains tasks to install apache2 and ensure it's running.
 ### /roles/timezone/tasks/main.yml
-- Contains task to set timezone
+- Contains task to set timezone.
 ### /tasks/deploy_html.yml
 - Contains tasks to deploy html page on ec2 instances.
 ### vars/mp_vars.yml
@@ -50,6 +50,11 @@ Using Terraform to setup 3 EC2 instances put behind a load balancer, and integra
 ### ansible.cfg
 - Contains configurations for ansible.
 ### mini-project.yml
-- Deploys apache2 role
-- Deploys timezone role
+- Deploys apache2 role.
+- Deploys timezone role.
 - Deploys tasks in "tasks/deploy_html.yml"
+## Configurations in ./altschool-terraform-mini-project/
+### main.tf
+- Calls and runs the ec2 module.
+- Deploys the ansible playbook on the ec2 instances.
+
