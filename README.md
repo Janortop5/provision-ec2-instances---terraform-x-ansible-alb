@@ -39,17 +39,17 @@ Using Terraform to setup 3 EC2 instances put behind a load balancer, and integra
 - Sets required terraform version.
 - Specifies aws region for Terraform configuration.
 ## Files in ./ansible/
-### /roles/apache2/tasks/main.yml
+#### /roles/apache2/tasks/main.yml
 - Contains tasks to install apache2 and ensure it's running.
-### /roles/timezone/tasks/main.yml
+#### /roles/timezone/tasks/main.yml
 - Contains task to set timezone.
-### /tasks/deploy_html.yml
+#### /tasks/deploy_html.yml
 - Contains tasks to deploy html page on ec2 instances.
-### vars/mp_vars.yml
+#### vars/mp_vars.yml
 - Contains variables for ansible playbook.
-### ansible.cfg
+#### ansible.cfg
 - Contains configurations for ansible.
-### mini-project.yml
+#### mini-project.yml
 - Deploys apache2 role.
 - Deploys timezone role.
 - Deploys tasks in "tasks/deploy_html.yml"
@@ -65,7 +65,7 @@ runs successfully, the terraform configuration has been set to wait for you to d
 
 If the configuration fails, make sure to add the hosted zone name servers to your domain provider's dashboard and apply
 again, that's if you didn't do it when the configuration was running.
-## Setup
+### Setup
 If aws cli is installed, run 'aws configure' in your terminal and pass in the required details to connect to your iam user account.
 
 in ./ansible/vars/mp_vars.yml
