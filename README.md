@@ -1,6 +1,6 @@
 # altschool-january-mini-project
 Using Terraform to setup 3 EC2 instances put behind a load balancer, and integrated with Ansible to provision the web servers.
-## Configurations in ./modules/ec2:
+## Configurations files in ./modules/ec2:
 ### vpc.tf
 - Creates vpc.
 - Creates public and private subnets for vpc.
@@ -65,4 +65,25 @@ runs successfully, the terraform configuration has been set to wait for you to d
 
 If the configuration fails, make sure to add the hosted zone name servers to your domain provider's dashboard and apply
 again, that's if you didn't do it when the configuration was running.
+## Setup
+If aws cli is installed, run 'aws configure' in your terminal and pass in the required details to connect to your iam user account.
 
+in ./ansible/vars/mp_vars.yml
+```
+specify the path to your key pair for the ec2 instances
+```
+in ./modules/ec2/variables.tf
+```
+specify the path to your key pair for the ec2 instances
+```
+in ./altschool-terraform-mini-project/
+```
+run 'terraform init' to install neccessary plugins.
+run 'terraform fmt' to format configuration files.
+run 'terraform validate' to confirm configuration is valid.
+run 'terraform plan' to see changes to be made to infrastructure.
+```
+## Deploy
+```
+run 'terraform apply -auto-approve' to apply configurations.
+```
