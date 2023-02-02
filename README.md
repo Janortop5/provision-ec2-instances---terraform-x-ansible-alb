@@ -14,7 +14,7 @@ Using Terraform to setup 3 EC2 instances put behind a load balancer, and integra
 ### ec2_instance.tf
 - Creates two ec2 instances in the first public subnet.
 - Creates one ec2 instance in the second public subnet (different availability zone).
-- Creates host-inventory file to be used by ansible configuration.
+- Creates host-inventory file in ./ansible/ directory to be used by ansible playbook.
 - Confirms ssh connection to instances is ready.
 ### alb.tf
 - Creates load balancer.
