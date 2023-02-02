@@ -19,4 +19,22 @@ Using Terraform to setup 3 EC2 instances put behind a load balancer, and integra
 ### alb.tf
 - Creates load balancer.
 - Creates target group for load balancer.
-- Adds instances to the target group
+- Adds instances to the target group.
+### route_53.tf
+- Creates hosted zone for domain.
+- Creates A record for subdomain.
+- Points subdomain to load balancer.
+- Requests acm certificates for domain and wildcards.
+- Creates cname records for certifcate validation.
+- Validates acm certificates.
+### listeners.tf
+- Creates HTTP listener on the load balancer and redirects ttraffic to HTTPS.
+- Creates HTTPS listener on the load balancer and forwards the traffic to the ec2 instances.
+### variables.tf
+- Contains variables for Terraform configuration.
+### data.tf
+- Requests terraform to read information from "aws_route53_zone" for acm certificate validation.
+### providers.tf
+- Sets aws as required provider and defines plugin version for Terraform configuration.
+- Sets required terraform version.
+- Specifies aws region for Terraform configuration.
