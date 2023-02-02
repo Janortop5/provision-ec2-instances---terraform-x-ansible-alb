@@ -1,6 +1,6 @@
 # altschool-january-mini-project
 Using Terraform to setup 3 EC2 instances put behind a load balancer, and integrated with Ansible to provision the web servers.
-## Configurations files in ./modules/ec2:
+## Configuration files in ./modules/ec2:
 ### vpc.tf
 - Creates vpc.
 - Creates public and private subnets for vpc.
