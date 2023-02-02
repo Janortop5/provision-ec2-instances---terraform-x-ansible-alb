@@ -38,3 +38,18 @@ Using Terraform to setup 3 EC2 instances put behind a load balancer, and integra
 - Sets aws as required provider and defines plugin version for Terraform configuration.
 - Sets required terraform version.
 - Specifies aws region for Terraform configuration.
+## Files in ./ansible/
+### /roles/apache2/tasks/main.yml
+- Contains tasks to install apache2 and ensure it's running.
+### /roles/timezone/tasks/main.yml
+- Contains task to set timezone
+### /tasks/deploy_html.yml
+- Contains tasks to deploy html page on ec2 instances.
+### vars/mp_vars.yml
+- Contains variables for ansible playbook.
+### ansible.cfg
+- Contains configurations for ansible.
+### mini-project.yml
+- Deploys apache2 role
+- Deploys timezone role
+- Deploys tasks in "tasks/deploy_html.yml"
