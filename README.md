@@ -57,4 +57,12 @@ Using Terraform to setup 3 EC2 instances put behind a load balancer, and integra
 ### main.tf
 - Calls and runs the ec2 module.
 - Deploys the ansible playbook on the ec2 instances.
+## Apply Configurations
+### Instruction
+When the configuration is running, immediately the hosted zone has been created,
+add the name servers for the hosted zone to your domain provider dashboard to ensure the configuration
+runs successfully, the terraform configuration has been set to wait for you to do this, this is needed for the acm certificate to be validated.
+
+If the configuration fails, make sure to add the hosted zone name servers to your domain provider's dashboard and apply
+again, that's if you didn't do it when the configuration was running.
 
