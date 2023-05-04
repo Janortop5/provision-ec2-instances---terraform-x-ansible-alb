@@ -5,6 +5,7 @@ terraform {
     namedotcom = {
       source  = "lexfrei/namedotcom"
       version = "1.2.5"
+    }
   }
 }
 
