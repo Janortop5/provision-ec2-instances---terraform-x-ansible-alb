@@ -14,6 +14,16 @@ resource "aws_route53_record" "subdomain" {
   }
 }
 
+resource "namedotcom_domain_nameservers" "eaaladejana-live" {
+  domain_name = "eaaladejana.live"
+  nameservers = [
+    "${aws_route53_zone.hosted_zone.name_servers.0}",
+    "${aws_route53_zone.hosted_zone.name_servers.1}",
+    "${aws_route53_zone.hosted_zone.name_servers.2}",
+    "${aws_route53_zone.hosted_zone.name_servers.3}",
+  ]
+}
+
 resource "aws_acm_certificate" "cert" {
   domain_name               = var.cert.cert_1.domain
   subject_alternative_names = ["*.${var.cert.cert_1.domain}"]
@@ -22,6 +32,9 @@ resource "aws_acm_certificate" "cert" {
   lifecycle {
     create_before_destroy = true
   }
+  depends_on = [
+    namedotcom_domain_nameservers.eaaladejana-live
+  ]
 }
 
 resource "aws_route53_record" "cname_validate" {
@@ -32,8 +45,6 @@ resource "aws_route53_record" "cname_validate" {
       type    = dvo.resource_record_type
     }
   }
-
-
 
   allow_overwrite = true
   name            = each.value.name
