@@ -18,7 +18,7 @@ resource "null_resource" "ansible" {
   ]
 }
 
-  terraform {
+terraform {
    backend "s3" {
    region         = "us-east-1"
    bucket         = "altschool-tf-state"
