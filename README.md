@@ -86,5 +86,5 @@ run 'terraform plan' to see changes to be made to infrastructure.
 ```
 ### Deploy
 ```
-run 'terraform apply -auto-approve' to apply configurations.
+run 'terraform apply --auto-approve' to apply configurations.
 ```
