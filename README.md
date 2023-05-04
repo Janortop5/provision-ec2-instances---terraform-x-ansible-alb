@@ -68,7 +68,7 @@ again, that's if you didn't do it when the configuration was running.
 ### Setup
 If aws cli is installed, run 'aws configure' in your terminal and pass in the required details to connect to your iam user account.
 
-in ./ansible/vars/mp_vars.yml
+in ./ansible/vars/ansible.cfg
 ```
 specify the path to your key pair for the ec2 instances
 ```
