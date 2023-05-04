@@ -8,3 +8,8 @@ terraform {
 provider "aws" {
   region = var.aws_region
 }
+
+provider "namedotcom" {
+  username = var.namedotcom_username
+  token    = var.namedotcom_token
+}
