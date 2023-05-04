@@ -70,11 +70,12 @@ If aws cli is installed, run 'aws configure' in your terminal and pass in the re
 
 in ./ansible/vars/ansible.cfg
 ```
-specify the path to your key pair for the ec2 instances
+specify the path to your key pair for the ansible connection
 ```
 in ./modules/ec2/variables.tf
 ```
-specify the path to your key pair for the ec2 instances
+specify the path to your key pair in variable "remote_exec" for remote_exec connection
+specify the name of the key pair to be used in variable "ec2_instance_key"
 ```
 in ./altschool-terraform-mini-project/
 ```
