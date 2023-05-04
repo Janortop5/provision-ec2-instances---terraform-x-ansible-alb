@@ -72,6 +72,10 @@ in ./ansible/vars/ansible.cfg
 ```
 specify the path to your key pair for the ansible connection
 ```
+set right permissions for private key
+```
+use command: "chmod 400 <path to key>"
+```
 in ./modules/ec2/variables.tf
 ```
 specify the path to your key pair in variable "remote_exec" for remote_exec connection
