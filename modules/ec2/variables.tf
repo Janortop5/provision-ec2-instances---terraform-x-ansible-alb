@@ -185,8 +185,8 @@ variable "alb_listener_2" {
 variable "domain" {
   type = map(any)
   default = {
-    domain    = "eaaladejana.me"
-    subdomain = "terraform-test.eaaladejana.me"
+    domain    = "eaaladejana.live"
+    subdomain = "terraform-test.eaaladejana.live"
     type      = "A"
   }
 }
@@ -195,12 +195,12 @@ variable "cert" {
   type = map(any)
   default = {
     cert_1 = {
-      domain            = "eaaladejana.me"
+      domain            = "eaaladejana.live"
       validation_method = "DNS"
     }
 
     cert_2 = {
-      domain            = "terraform-test.eaaladejana.me"
+      domain            = "terraform-test.eaaladejana.live"
       validation_method = "DNS"
     }
   }
