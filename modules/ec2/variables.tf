@@ -207,11 +207,11 @@ variable "cert" {
 }
 
 variable "namedotcom_username" {
-  default = "janortop5"
+  default = ""
 }
 
 variable "namedotcom_token" {
-  default = "56e15b07a343ebeadd3eea483ef1e13db6074aa0"
+  default = ""
 }
 
 variable "tags" {
