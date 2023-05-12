@@ -73,6 +73,7 @@ in ./modules/ec2/variables.tf
 ```
 specify the path to your key pair in variable "remote_exec" for remote_exec connection
 specify the name of the key pair to be used in variable "ec2_instance_key"
+set the namedotcom username and api prod token in variables "namedotcom_username" "namedotcom_token"  respectively
 ```
 in ./altschool-terraform-mini-project/
 ```
